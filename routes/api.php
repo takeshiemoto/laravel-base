@@ -1,11 +1,12 @@
 <?php
 
+use App\Http\Controllers\Api\ArticleController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/test', function () {
-    return response()->json(['message' => 'Hello World!']);
+Route::middleware(['auth:sanctum', 'check.article.permission:create'])->group(function () {
+    Route::post('/articles', [ArticleController::class, 'store']);
 });
 
 // 認証不要のルート

@@ -1,8 +1,29 @@
+POST http://localhost:80/api/articles
+Authorization: Bearer 3|K8TfmBANHVeMqXMBVH4DxsPGl9hJfUwyHdidkQPb5be3eb3d
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "記事のタイトル",
+    "content": "記事の本文"
+}
+
+###
 POST http://localhost:80/api/login
 Content-Type: application/json
 Accept: application/json
 
 {
     "email": "admin@example.com",
+    "password": "password"
+}
+
+###
+POST http://localhost:80/api/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "user.b@example.com",
     "password": "password"
 }
