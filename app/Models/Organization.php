@@ -10,12 +10,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  *
  *
- * @property int $id
- * @property string $name
- * @property string|null $description
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Article> $articles
  * @property-read int|null $articles_count
  * @property-read \App\Models\TFactory|null $use_factory
@@ -25,12 +19,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Organization newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Organization onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Organization query()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Organization whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Organization whereDeletedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Organization whereDescription($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Organization whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Organization whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Organization whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Organization withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Organization withoutTrashed()
  * @mixin \Eloquent

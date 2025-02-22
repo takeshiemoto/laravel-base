@@ -1,4 +1,4 @@
-.PHONY: up down routes migrate-refresh ide-models ide-generate ide-helpers
+.PHONY: up down routes migrate-refresh ide-models ide-generate ide-helpers pint
 
 # Sailコンテナの起動
 up:
@@ -25,4 +25,8 @@ ide-generate:
 	./vendor/bin/sail artisan ide-helper:generate
 
 # 全てのIDE Helper補完を生成
-ide-helpers: ide-generate ide-models
+ide-helpers: ide-generate ide-models pint
+
+# コードスタイルの修正
+pint:
+	./vendor/bin/sail pint

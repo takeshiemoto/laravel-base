@@ -9,27 +9,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  *
  *
- * @property int $id
- * @property int $user_id
- * @property int $can_create
- * @property int $can_edit
- * @property int $can_delete
- * @property int $can_view
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\TFactory|null $use_factory
- * @property-read \App\Models\User $user
+ * @property-read \App\Models\User|null $user
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Permission newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Permission newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Permission query()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Permission whereCanCreate($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Permission whereCanDelete($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Permission whereCanEdit($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Permission whereCanView($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Permission whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Permission whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Permission whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Permission whereUserId($value)
  * @mixin \Eloquent
  */
 class Permission extends Model
